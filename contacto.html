@@ -12,10 +12,6 @@
 			<!--encabezado-->
             <h1>Ej HTML programa clip -contacto-</h1>
 
-
-            
-
-
             <!--Menu-->
             <nav class="navbar navbar-expand-sm bg-light"> <!--Menú superior-->
 				<ul class="navbar-nav">
@@ -38,37 +34,34 @@
                         </a>
                     </li>
 					<li class="nav-item">
-                        <a class="nav-link" href="https://www.instagram.com/liber.lehnert/?hl=es-la" target="_blank" title="perfil de instagram">
+                        <a class="nav-link" href="https://www.instagram.com/liber.lehnert/?hl=es-la" target="_blank" title="insta">
                             <img src="imagenes/insta.jpg" style="width:30px;">
-                            perfil de instagram
+                            abrir perfil de instagram
                         </a>
                     </li>
 				</ul>
 			</nav>      
             
-            
-
-
             <!--Contenido de contacto.html-->
             <h2>Contacto</h2>
 
             <form action="#" class="was-validated">
                 <div class="form-group">
                     <label for="nombre">Nombre*</label>
-                    <input type="text" pattern="[a-zA-Z]" class="form-control" id="nombre" placeholder="Escriba su nombre" required>
+                    <input type="text" class="form-control" id="nombre" placeholder="Escriba su nombre" required>
                     <div class="valid-feedback">Nombre valido.</div>
-                    <div class="valid-feedback">*Dato obligatorio.</div>
+                    <div class="invalid-feedback">*Dato obligatorio.</div>
                 </div>
                 <div class="form-group">
                     <label for="apellido">Apellido*</label>
-                    <input type="text" pattern="[a-zA-Z]" class="form-control" id="apellido" placeholder="Escriba su apellido" required>
+                    <input type="text" class="form-control" id="apellido" placeholder="Escriba su apellido" required>
                     <div class="valid-feedback">Apellido valido.</div>
-                    <div class="valid-feedback">*Dato obligatorio.</div>
+                    <div class="invalid-feedback">*Dato obligatorio.</div>
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Dirección de Email*</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Escriba su dirección de email" required>
-                  <div class="valid-feedback">*Dato obligatorio. Debe tener formato de email</div>
+                  <div class="invalid-feedback">*Dato obligatorio. Debe tener formato de email</div>
                 </div>
                 <div class="form-group">
                     <label for="msj">Mensaje</label>
