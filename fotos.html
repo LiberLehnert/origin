@@ -92,15 +92,14 @@
 						
 							No soy libre, no soy preso, no preguntes mi nombre, ya deberias saber eso.
 						</p> 
-							<!--
-							1) una pista: no soy un ave
-							2) de verdad no lo sabes? es facil, está relacionado con el contenido de la pag web
-							+liber
-							+Liber
-							+LIBER
-							-->
+
 						<button onclick="jugar_ahora()">Jugar</button>
+					
 						<p id="rta"></p>
+
+						<button onclick="ver_respuesta()">Ver Respuesta</button>
+
+						<p id="ver"></p>
 							
 					</div>
 				</div>
@@ -124,8 +123,12 @@
 				respuesta = prompt("Ingrese su respuesta");
 				if (respuesta == "Liber"||respuesta == "liber"||respuesta == "LIBER")
 				{
-					alert("Felicidades, '"+respuesta+"' era la respuesta correcta");
+					alert("Felicidades, '"+respuesta+"' era la respuesta correcta");					
 					acierto=true;
+				}
+				else if (cant_intentos==3)
+				{
+					alert("Le quedan " + cant_intentos + " intentos");
 				}
 				else if (cant_intentos==2)
 				{
@@ -139,14 +142,15 @@
 				}
 				else
 				{
-					alert("Le quedan " + cant_intentos + " intentos");
+					alert("Perdiste. Ya no te quedan intentos");
 				}
 
 			}
-
-			document.getElementById("rta").innerHTML="La respuesta era: <strong>Liber</strong>"
 			
 
+		}
+		function ver_respuesta() {
+			document.getElementById("rta").innerHTML="La respuesta era: <strong>Liber</strong>"
 		}
 
 	</script>
