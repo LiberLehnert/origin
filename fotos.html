@@ -51,8 +51,8 @@
 				</p>
 		
 				<!--Tabla con imagenes-->
-				<div class="row">
-					<table border="2">
+				<div id ="tabla" class="row">
+					<table border="2" 	style="background:  rgb(228, 226, 226)">
 						<tr>
 							<div class="col-md-3">
 								<th>Bruno</th>
@@ -69,19 +69,40 @@
 						</tr>
 						<tr>
 							<div class="col-md-3">
-								<td><img src="imagenes/bruno.jpg" alt="bruno" title="bruno"/></td>
+								<td><img class="mx-auto d-block" src="imagenes/bruno.jpg" alt="bruno" title="bruno"/></td>
 							</div>
 							<div class="col-md-3">
-								<td><img src="imagenes/ñuñi.jpg" alt="ñuñi" title="ñuñi"/></td>
+								<td><img class="mx-auto d-block" src="imagenes/ñuñi.jpg" alt="ñuñi" title="ñuñi"/></td>
 							</div>
 							<div class="col-md-3">
-								<td><img src="imagenes/canela.jpg" alt="canela" title="canela"/></td>
+								<td><img class="mx-auto d-block" src="imagenes/canela.jpg" alt="canela" title="canela"/></td>
 							</div>
 							<div class="col-md-3">
-								<td><img src="imagenes/odin.jpg" alt="odin" title="odin"/></td>
+								<td><img class="mx-auto d-block" src="imagenes/odin.jpg" alt="odin" title="odin"/></td>
 							</div>
 						</tr>
 					</table>
+				</div>
+				<div class="row justify-content-center">
+					<div id="acertijo" class="col-sm-8 align-self-center text-center">
+						<p>
+							Una pequeña adivinanza para pasar el rato:
+						</p>
+						<p>	
+						
+							No soy libre, no soy preso, no preguntes mi nombre, ya deberias saber eso.
+						</p> 
+							<!--
+							1) una pista: no soy un ave
+							2) de verdad no lo sabes? es facil, está relacionado con el contenido de la pag web
+							+liber
+							+Liber
+							+LIBER
+							-->
+						<button onclick="jugar_ahora()">Jugar</button>
+						<p id="rta"></p>
+							
+					</div>
 				</div>
 		
 			</div>
@@ -89,4 +110,45 @@
 
 		</section>
 	</body>
+
+	<script>
+		function jugar_ahora() {
+
+			var cant_intentos = 4;
+			var acierto = false;
+			var respuesta;
+
+			while(cant_intentos>0 && acierto==false)
+			{
+				cant_intentos--;
+				respuesta = prompt("Ingrese su respuesta");
+				if (respuesta == "Liber"||respuesta == "liber"||respuesta == "LIBER")
+				{
+					alert("Felicidades, '"+respuesta+"' era la respuesta correcta");
+					acierto=true;
+				}
+				else if (cant_intentos==2)
+				{
+					alert("Le quedan " + cant_intentos + " intentos");
+					alert("PISTA: no soy un ave.");
+				}
+				else if (cant_intentos==1)
+				{
+					alert("Le quedan " + cant_intentos + " intentos");
+					alert("¿de verdad no lo sabes? es facil, está relacionado con el contenido de la pag web");
+				}
+				else
+				{
+					alert("Le quedan " + cant_intentos + " intentos");
+				}
+
+			}
+
+			document.getElementById("rta").innerHTML="La respuesta era: <strong>Liber</strong>"
+			
+
+		}
+
+	</script>
+
 <html>
